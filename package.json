@@ -5,11 +5,11 @@
   "type": "module",
   "main": "server/src/server.js",
   "scripts": {
-    "dev:server": "npm run dev --prefix server",
-    "dev:client": "npm run dev --prefix client",
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "node api.js && npm run dev --prefix server",
+    "dev:client": "node api.js && npm run dev --prefix client",
+    "dev": "node api.js && concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "build": "cd client && npm install && npm run build",
-    "start": "node server/src/server.js",
+    "start": "node api.js && node server/src/server.js",
     "test": "npm test --prefix server"
   },
   "dependencies": {

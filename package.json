@@ -1,0 +1,27 @@
+{
+  "name": "fittrack",
+  "version": "1.0.0",
+  "description": "FitTrack - Gym Calorie Deficit & Fat-Loss Tracker",
+  "type": "module",
+  "main": "server/src/server.js",
+  "scripts": {
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "cd client && npm install && npm run build",
+    "start": "node server/src/server.js",
+    "test": "npm test --prefix server"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

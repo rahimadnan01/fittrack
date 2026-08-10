@@ -8,11 +8,10 @@ dist
 client/dist
 
 # Environment variables
-.env
 server/.env
-.env.local
 
 # System & Vercel
 .DS_Store
 .vercel
 *.log
+config.bat
